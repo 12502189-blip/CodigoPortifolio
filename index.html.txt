@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de TI - Derick (2º Ano)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+
+    <header class="header">
+        <div class="logo">
+            Derick <span>Lima</span>
+        </div>
+
+       <nav class="menu">b
+      <utton type="button" onclick="rolarPara('inicio')">Home</button>
+      <button type="button" onclick="rolarPara('sobre')">Sobre Mim</button>
+      <button type="button" onclick="rolarPara('projetos')">Projetos</button>
+      <button type="button" onclick="rolarPara('notas')">Calculadora de Notas</button>
+     </nav>
+
+        <div class="botoes-topo">
+            <button onclick="abrirCV()" class="btn-cv">CV</button>
+            
+            <button id="btnTema" onclick="mudarTema()"> Modo Claro</button>
+        </div>
+    </header>
+
+    
+    <section id="inicio" class="hero">
+        <div class="foto-perfil">
+            <img src="img pr">
+        </div>
+        <div class="texto-hero">
+            <h1>Derick <span>Lima</span></h1>
+            <h2>Estudante do 2º Ano do Ensino Médio & Desenvolvedor Front-End</h2>
+            <h2>Tenho 17 anos, moro em Belo Horizonte e estou aprendendo a programar sites com HTML, CSS e JavaScript no curso técnico. Se estiver lendo isso, professor, por favor me dê 10!</h2>
+            <utton type="button" onclick="#sobre" class="btn-link">Saber mais sobre mim"</button>
+        </div>
+    </section>
+
+    
+    <section id="sobre" class="secao">
+        <div class="card">
+            <h2>Sobre Mim & O Que Aprendi Este Ano</h2>
+            <h2>Atualmente estou no 2º ano do Ensino Médio. Além das matérias da escola como Física (Termodinâmica) e Matemática (Matrizes e Determinantes), estou me dedicando bastante ao desenvolvimento web.</h2
+            
+            <div class="grid-habilidades">
+                <div class="item-hab">
+                    <h3> Tecnologias Web</h3>
+                    <h2>HTML5, CSS3 (Flexbox/Grid), JavaScript (Lógica, Funções, DOM e ES6).</h2>
+                </div>
+                <div class="item-hab">
+                    <h3>Matérias do 2º Ano</h3>
+                    <h2>Matemática (Sistemas Lineares/Matrizes) e Física (Calorimetria e Gases).</h2>
+                </div>
+                <div class="item-hab">
+                    <h3> Ferramentas</h3>
+                    <h2>VS Code, Git e GitHub para subir os projetos da escola.<h2>
+                </div>
+                <div class="item-hab">
+                    <h3> Objetivo</h3>
+                    <h2>Conseguir meu primeiro estágio na área de tecnologia e passar de ano sem recuperação!</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="notas" class="secao">
+        <div class="card">
+            <h2>Calculadora de Média (Área do Professor)</h2>
+            <h2>Fiz essa ferramenta para provar que sei usar lógica em JavaScript no 2º ano!</h2>
+
+            <div class="form-notas">
+                <div class="campo">
+                    <label>Nota de Algoritmos/JS (0 a 100):</label>
+                    <input type="number" id="n1" placeholder="Digite aqui">
+                </div>
+                <div class="campo">
+                    <label>Nota de Termodinâmica (0 a 100):</label>
+                    <input type="number" id="n2" placeholder="Digite aqui">
+                </div>
+                <div class="campo">
+                    <label>Nota de Matrizes (0 a 100):</label>
+                    <input type="number" id="n3" placeholder="Digite aqui">
+                </div>
+            </div>
+
+            <button onclick="validarNotas()" class="btn-calc">Calcular Média Final</button>
+            <div id="resultado" class="msg-resultado"></div>
+        </div>
+    </section>
+
+    <div id="modalCV" class="modal">
+        <div class="conteudo-modal">
+            <span onclick="fecharCV()" class="fechar">&times;</span>
+            <h3>Curriculum Vitae - Derick Lima</h3>
+            <h3><strong>Idade:</strong> 17 anos</h3>
+            <h3><strong>Escolaridade:</strong> 2º Ano do Ensino Médio (Técnico em TI)</h3>
+            <h3strong>Conhecimentos:</strong> HTML, CSS, JavaScript, Pacote Office e Git.</h3
+            <button onclick="alert('Baixando currículo em PDF...')" class="btn-calc">Baixar PDF</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Feito por Derick Lima - Trabalho do 2º Ano do Ensino Médio © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

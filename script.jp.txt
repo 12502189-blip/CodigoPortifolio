@@ -1,0 +1,54 @@
+
+function mudarTema() {
+    let corpo = document.body;
+    let botao = document.getElementById("btnTema");
+
+    if (corpo.classList.contains("dark-mode")) {
+     
+        corpo.classList.remove("dark-mode");
+        corpo.classList.add("light-mode");
+        botao.innerHTML = " odo Escuro";
+        botao.style.backgroundColor = "#e5e7eb";
+        botao.style.color = "#000000";
+    } else {
+       
+        corpo.classList.remove("light-mode");
+        corpo.classList.add("dark-mode");
+        botao.innerHTML = "Modo Claro";
+        botao.style.backgroundColor = "#333333";
+        botao.style.color = "#ffffff";
+    }
+}
+
+
+function abrirCV() {
+    document.getElementById("modalCV").style.display = "flex";
+}
+
+function fecharCV() {
+    document.getElementById("modalCV").style.display = "none";
+}
+
+
+function validarNotas() {
+   
+    let nota1 = parseFloat(document.getElementById("n1").value);
+    let nota2 = parseFloat(document.getElementById("n2").value);
+    let nota3 = parseFloat(document.getElementById("n3").value);
+    let divResultado = document.getElementById("resultado");
+
+    if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+        divResultado.innerHTML = "<span style='color: orange;'>Professor, por favor preencha as 3 notas para eu calcular!</span>";
+        return;
+    }
+
+   
+    let media = (nota1 + nota2 + nota3) / 3;
+    media = media.toFixed(1); // Arredonda para 1 casa decimal
+
+    if (media >= 60) {
+        divResultado.innerHTML = "<span style='color: #10B981;'>Média: " + media + " - APROVADO! 🎉 O código funcionou perfeitamente, prof!</span>";
+    } else {
+        divResultado.innerHTML = "<span style='color: #EF4444;'>Média: " + media + " - REPROVADO 😢 Preciso estudar mais Matrizes e Física!</span>";
+    }
+}
